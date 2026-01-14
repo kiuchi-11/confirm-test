@@ -2,11 +2,9 @@
 
 # 環境構築
   1. リポジトリをクローン
-	`bash
 	git clone git@github.com:kiuchi-11/confirm-test.git
 
   2. Dockerコンテナをビルド
-	`bash
 	docker-compose up -d --build
 
   3. Laravel環境構築
