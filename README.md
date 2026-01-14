@@ -25,14 +25,14 @@
 	nginx 1.21.1
 
 # ER図
-    +------------------+
-    |    contacts      |
-    +------------------+
-    | id (PK)          |
-    | category_id      |
-    | first_name       |
-    | last_name        |
-    | gender           |
+    +------------------+          +------------------+
+    |    contacts      |          |    categories    |
+    +------------------+          +------------------+
+    | id (PK)          |          | id (PK)          |
+    | category_id      | ++-----+≡| content          |
+    | first_name       |          | created_at       |
+    | last_name        |          | updated_at       |
+    | gender           |          +------------------+
     | email            |
     | tel              |
     | address          |

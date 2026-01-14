@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,8 @@ Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/thanks', function () {
     return view('thanks');
 });
+
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
