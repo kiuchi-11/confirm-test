@@ -1,10 +1,10 @@
 # confirm-test
 
 # 環境構築
-  1. リポジトリをクローン
+  1. リポジトリをクローン：
 	git clone git@github.com:kiuchi-11/confirm-test.git
 
-  2. Dockerコンテナをビルド
+  2. Dockerコンテナをビルド：
 	docker-compose up -d --build
 
   3. Laravel環境構築
