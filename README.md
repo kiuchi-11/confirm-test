@@ -1,11 +1,11 @@
 # confirm-test
 
 # 作成状況
-  入力画面
-  お問い合わせ確認画面
-  サンクスページ
-  会員登録画面
-  ログイン画面
+  入力画面  
+  お問い合わせ確認画面  
+  サンクスページ  
+  会員登録画面  
+  ログイン画面  
 
 # 環境構築
   1. リポジトリをクローン  
@@ -23,7 +23,7 @@
 
 # 開発環境
 	お問い合わせ画面：http://localhost/
-  会員登録画面：http://localhost/register
+    会員登録画面：http://localhost/register
 	phpMyAdmin：http://localhost:8080/
 
 # 使用技術
