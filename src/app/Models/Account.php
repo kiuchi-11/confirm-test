@@ -3,21 +3,22 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Account extends Model
+class Account extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
+
+    protected $table = 'accounts';
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::creating(function ($account) {
-            $account->password = bcrypt($account->password);
-        });
-    }
+    protected $hidden = [
+        'password',
+    ];
 }

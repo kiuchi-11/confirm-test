@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(224, 219, 212);
+    ;
+    line-height: 1.6;
+}
+
+main {
+    padding-top: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 25px;
+    right: 60px;
+}
+
+nav a {
+    position: fixed;
+    top: 25px;
+    right: 70px;
+    color: rgb(206, 196, 184);
+    text-decoration: none;
+    padding: 0px 18px;
+    background-color: #f3f0f0;
+    font-family: "Times New Roman";
+    border: 1px solid rgb(206, 196, 184);
+}
+
+.login-form__heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "Times New Roman";
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 70px 55px 65px 55px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgb(206, 196, 184);
+}
+
+.form__group {
+    margin-bottom: 30px;
+}
+
+.form__group-title {
+    display: block;
+    font-size: 18px;
+    padding-left: 40px;
+}
+
+.form__input--text {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    margin: 0 auto;
+    background-color: #f5f3f3;
+}
+
+.form__input--text::placeholder {
+    text-indent: 3%;
+    color: #93826fff;
+    font-family: "candara";
+    font-size: 12px;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.form-submit button {
+    background: #8b7b6f;
+    color: #fff;
+    border: none;
+    padding: 5px 23px;
+    font-size: 14px;
+    cursor: pointer;
+}

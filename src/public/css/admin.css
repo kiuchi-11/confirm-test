@@ -1,0 +1,25 @@
+.contact-form__heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "Times New Roman";
+}
+
+.header {
+    position: fixed;
+    top: 25px;
+    right: 60px;
+}
+
+nav a {
+    position: fixed;
+    top: 25px;
+    right: 70px;
+    color: rgb(206, 196, 184);
+    text-decoration: none;
+    padding: 0px 18px;
+    background-color: #f3f0f0;
+    font-family: "Times New Roman";
+    border: 1px solid rgb(206, 196, 184);
+}

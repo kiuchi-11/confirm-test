@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\LoginRequest;
 use App\Models\Account;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -13,35 +15,31 @@ class AuthController extends Controller
         return view('register');
     }
 
-    public function register(Request $request)
+    public function register(RegisterRequest $request)
     {
-        // 入力検証
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:accounts,email',  // users -> accounts
-            'password' => 'required|string|min:6|confirmed',
-        ]);
-
-        // アカウント作成
-        $account = Account::create([  // User -> Account
+        $account = Account::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        // ログイン画面にリダイレクト
-        return redirect()->route('login')->with('success', 'アカウントが作成されました。');
+        Auth::guard('account')->login($account);
+
+        return redirect()->route('admin');
     }
 
-    // ログインフォームの表示
     public function showLoginForm()
     {
-        return view('login'); // ログインフォームビュー（login.blade.php）
+        return view('login');
     }
 
-    // ログイン処理（追加）
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        // ログイン処理をここに追加（認証など）
+        if (!Auth::guard('account')->attempt($request->only('email', 'password'))) {
+            return back()
+            ->withErrors(['login' => 'ログイン情報が登録されていません'])
+            ->withInput();
+            }
+        return redirect()->route('admin');
     }
 }

@@ -47,7 +47,7 @@ nav a {
     width: 100%;
     max-width: 500px;
     margin: 40px auto;
-    padding: 60px 55px 40px 55px;
+    padding: 50px 55px 40px 55px;
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid rgb(206, 196, 184);
@@ -71,6 +71,20 @@ nav a {
     border: none;
     margin: 0 auto;
     background-color: #f5f3f3;
+}
+
+.form__input--text::placeholder {
+    text-indent: 3%;
+    color: #93826fff;
+    font-family: "candara";
+    font-size: 12px;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    font-size: 14px;
+    padding-left: 40px;
 }
 
 .form-submit {
