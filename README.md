@@ -37,7 +37,7 @@
     |    contacts      |          |    categories    |
     +------------------+          +------------------+
     | id (PK)          |          | id (PK)          |
-    | category_id      | ++-----+≡| content          |
+    | category_id      | ≡+------+| content          |
     | first_name       |          | created_at       |
     | last_name        |          | updated_at       |
     | gender           |          +------------------+
