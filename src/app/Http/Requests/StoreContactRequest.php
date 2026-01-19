@@ -28,9 +28,11 @@ class StoreContactRequest extends FormRequest
             'first_name'    => ['required', 'string'],
             'gender'        => ['required', 'in:1,2,3'],
             'email'         => ['required', 'email'],
-            'tel'           => ['required', 'regex:/^[0-9]+$/'],
+            'tel1'          => 'required|regex:/^[0-9]+$/',
+            'tel2'          => 'required|regex:/^[0-9]+$/',
+            'tel3'          => 'required|regex:/^[0-9]+$/',
             'address'       => ['required', 'string'],
-            'category_id'   => ['required', 'in:1,2,3'],
+            'category_id'   => ['required', 'exists:categories,id'],
             'content'       => ['required', 'string', 'max:120'],
         ];
     }

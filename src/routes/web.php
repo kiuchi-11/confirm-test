@@ -19,6 +19,10 @@ use App\Http\Controllers\AuthController;
 Route::get('/', [ContactController::class, 'index']);
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
+
+Route::get('/confirm', function () {
+    return redirect('/');
+});
 Route::post('/contacts', [ContactController::class, 'store']);
 
 Route::get('/thanks', function () {

@@ -39,7 +39,9 @@
           <th class="confirm-table__header">電話番号</th>
           <td class="confirm-table__text">
             <p>{{ $data['tel'] }}</p>
-            <input type="hidden" name="tel" value="{{ $data['tel'] }}">
+            <input type="hidden" name="tel1" value="{{ $data['tel1'] }}">
+            <input type="hidden" name="tel2" value="{{ $data['tel2'] }}">
+            <input type="hidden" name="tel3" value="{{ $data['tel3'] }}">
           </td>
         </tr>
         <tr class="confirm-table__row">
@@ -61,7 +63,6 @@
           <td class="confirm-table__text">
             <p>{{ $categoryLabel }}</p>
             <input type="hidden" name="category_id" value="{{ $data['category_id'] }}">
-          </td>
           </td>
         </tr>
         <tr class="confirm-table__row">

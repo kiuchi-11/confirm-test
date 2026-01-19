@@ -132,12 +132,12 @@
         </div>
         <div class="form__group-content">
           <div class="form__input--select">
-          <select name="category_id" value="{{ old('category_id') }}">
+          <select name="category_id">
             <option value="" disabled selected>選択してください</option>
-            @foreach (\App\Constants\Category::LIST as $id => $label)
-              <option value="{{ $id }}"
-                {{ old('category_id', $input['category_id'] ?? '') == $id ? 'selected' : '' }}>
-                {{ $label }}
+            @foreach ($categories as $category)
+              <option value="{{ $category->id }}"
+                {{ old('category_id', $input['category_id'] ?? '') == $category->id ? 'selected' : '' }}>
+                {{ $category->content }}
               </option>
             @endforeach
           </select>

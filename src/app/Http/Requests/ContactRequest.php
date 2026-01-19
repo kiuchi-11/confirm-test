@@ -30,7 +30,7 @@ class ContactRequest extends FormRequest
             'email'         => ['required', 'string', 'email'],
             'tel1'          => ['required', 'regex:/^[0-9]+$/', 'max:5'],
             'address'       => ['required', 'string'],
-            'category_id' => ['required', 'in:1,2,3'],
+            'category_id'   => ['required', 'exists:categories,id'],
             'content'       => ['required', 'string', 'max:120'],
         ];
     }
@@ -45,7 +45,7 @@ class ContactRequest extends FormRequest
             'email.email'           => 'メールアドレスはメール形式で入力してください',
             'tel1.required'         => '電話番号を入力してください',
             'tel1.regex'            => '電話番号は 半角英数字で入力してください',
-            'tel1.max:5'            => '電話番号は 5桁まで数字で入力してください',
+            'tel1.max'              => '電話番号は 5桁まで数字で入力してください',
             'address.required'      => '住所を入力してください',
             'category_id.required'  => 'お問い合わせの種類を選択してください',
             'content.required'      => 'お問い合わせ内容を入力してください',
